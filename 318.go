@@ -2,10 +2,16 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 var co = [...]uint32{0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432}
+
+func maxint(x, y int) int{
+	if x > y {
+		return x
+	}
+	return y
+}
 
 func maxProduct(words []string) int {
 	l := make([]int, len(words))
@@ -20,14 +26,14 @@ func maxProduct(words []string) int {
 	max := 0
 	for i := 0; i < len(code); i++ {
 		for j := i + 1; j < len(code); j++ {
-			if code[i] & code[j] != 0 {
+			if code[i]&code[j] != 0 {
 				continue
 			} else {
-				max = math.MaxInt32(max, l[i] * l[j])
+				max = maxint(max, l[i]*l[j])
 			}
 		}
 	}
-	return 1
+	return max
 }
 
 func main() {
