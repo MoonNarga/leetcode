@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package solution
 
 func integerReplacement(n int) int {
 	step := 0
@@ -22,10 +18,4 @@ func integerReplacement(n int) int {
 		}
 		step += 1
 	}
-}
-
-func main() {
-	var n int
-	fmt.Scan(&n)
-	fmt.Println(integerReplacement(n))
 }

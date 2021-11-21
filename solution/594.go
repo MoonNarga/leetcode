@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package solution
 
 func findLHS(nums []int) int {
 	numSet := make(map[int]int)
@@ -17,14 +13,9 @@ func findLHS(nums []int) int {
 	for i, v := range numSet {
 		if val, ok := numSet[i-1]; ok {
 			if val+v > length {
-				length = val+v
+				length = val + v
 			}
 		}
 	}
 	return length
-}
-
-func main() {
-	n := []int{1, 2, 3, 4}
-	fmt.Println(findLHS(n))
 }

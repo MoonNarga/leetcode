@@ -1,12 +1,8 @@
-package main
-
-import (
-	"fmt"
-)
+package solution
 
 var co = [...]uint32{0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432}
 
-func maxint(x, y int) int{
+func maxint(x, y int) int {
 	if x > y {
 		return x
 	}
@@ -34,9 +30,4 @@ func maxProduct(words []string) int {
 		}
 	}
 	return max
-}
-
-func main() {
-	words := []string{"abcw", "baz", "foo", "bar", "xtfn", "abcdef"}
-	fmt.Println((maxProduct(words)))
 }

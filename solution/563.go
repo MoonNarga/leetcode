@@ -1,4 +1,4 @@
-package main
+package solution
 
 import (
 	"fmt"
@@ -56,10 +56,4 @@ func insert(root **TreeNode) {
 	*root = &TreeNode{Val: da, Left: nil, Right: nil}
 	insert(&((*root).Left))
 	insert(&((*root).Right))
-}
-
-func main() {
-	var root *TreeNode
-	insert(&root)
-	fmt.Println(findTilt(root))
 }

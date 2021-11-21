@@ -1,7 +1,6 @@
-package main
+package solution
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -41,8 +40,6 @@ func isRectangleCover(rectangles [][]int) bool {
 	}
 	sort.Sort(&LsetLeft)
 	sort.Sort(&LsetRight)
-	fmt.Println(LsetLeft)
-	fmt.Println(LsetRight)
 	var fixLsetLeft Lslice
 	var fixLsetRight Lslice
 	tl := L{}
@@ -58,7 +55,7 @@ func isRectangleCover(rectangles [][]int) bool {
 			if tl.bottom < v.top {
 				return false
 			} else if tl.bottom == v.top {
-				tl.bottom = v.bottom	
+				tl.bottom = v.bottom
 			} else {
 				fixLsetLeft = append(fixLsetLeft, tl)
 				tl = v
@@ -85,14 +82,12 @@ func isRectangleCover(rectangles [][]int) bool {
 				fixLsetRight = append(fixLsetRight, tl)
 				tl = v
 			}
-			
+
 		}
 		if i == len(LsetRight)-1 {
 			fixLsetRight = append(fixLsetRight, tl)
 		}
 	}
-	fmt.Println(fixLsetLeft)
-	fmt.Println(fixLsetRight)
 	if fixLsetLeft[0].top != fixLsetRight[len(fixLsetRight)-1].top || fixLsetLeft[0].bottom != fixLsetRight[len(fixLsetRight)-1].bottom {
 		return false
 	}
@@ -110,9 +105,4 @@ func isRectangleCover(rectangles [][]int) bool {
 		}
 	}
 	return true
-}
-
-func main() {
-	rectangles := [][]int{{1,2,4,4},{1,0,4,1},{0,2,1,3},{0,1,3,2},{3,1,4,2},{0,3,1,4},{0,0,1,1}}
-	fmt.Println(isRectangleCover(rectangles))
 }
