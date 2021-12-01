@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	n := 11
-	fmt.Println(n)
+	s := "leetcode"
+	fmt.Println((s))
 }
