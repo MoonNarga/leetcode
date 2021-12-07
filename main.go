@@ -4,12 +4,7 @@ import (
 	"fmt"
 )
 
-func findRelativeRanks(score []int) []string {
-	co := 1
-	
-}
-
 func main() {
-	score := []int{5,4,3,2,1}
-	fmt.Println(findRelativeRanks(score))
+	// score := [][]int{{1, 2, 2}, {2, 3, 2}}
+	fmt.Println()
 }
