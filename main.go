@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	s := "?zs"
+	path := "/home//foo/"
 	fmt.Println()
 }
