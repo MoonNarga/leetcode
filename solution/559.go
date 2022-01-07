@@ -20,7 +20,7 @@ func dfs(root *Node, depth int) int {
 	return mdepth
 }
 
-func maxDepth(root *Node) int {
+func maxDepth_559(root *Node) int {
 	if root == nil {
 		return 0
 	}
