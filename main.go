@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
-	s := "(1+(2*3)+((8)/4))+1"
-	fmt.Println()
+	keysPressed := "spuda"
+	releaseTimes := []int{12,23,36,46,62}
+	fmt.Printf("%c\n", slowestKey(releaseTimes, keysPressed))
 }
