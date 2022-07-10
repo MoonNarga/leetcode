@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package solution
 
 func lenLongestFibSubseq(arr []int) int {
 	dp := make([][]int, len(arr))
@@ -30,9 +26,4 @@ func lenLongestFibSubseq(arr []int) int {
 		}
 	}
 	return maxLen
-}
-
-func main() {
-	num := []int{1, 3, 7, 11, 12, 14, 18}
-	fmt.Println(lenLongestFibSubseq(num))
 }
