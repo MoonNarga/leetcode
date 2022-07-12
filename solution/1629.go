@@ -1,6 +1,6 @@
 package solution
 
-func SlowestKey(releaseTimes []int, keysPressed string) byte {
+func slowestKey(releaseTimes []int, keysPressed string) byte {
 	alphatemp := keysPressed[0]
 	maxlast := releaseTimes[0]
 	for i := 1; i < len(releaseTimes); i++ {

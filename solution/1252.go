@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package solution
 
 func oddCells(m int, n int, indices [][]int) int {
 	countRow := make([]int, m)
@@ -15,16 +11,10 @@ func oddCells(m int, n int, indices [][]int) int {
 	count := 0
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
-			if (countRow[i] + countCol[j]) % 2 != 0 {
+			if (countRow[i]+countCol[j])%2 != 0 {
 				count++
 			}
 		}
 	}
 	return count
-}
-
-func main() {
-	m, n := 2, 3
-	indices := [][]int{{0, 1}, {1, 1}}
-	fmt.Println(oddCells(m, n, indices))
 }
