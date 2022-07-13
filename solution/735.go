@@ -1,9 +1,6 @@
-package main
+package solution
 
-import (
-	"fmt"
-	"math"
-)
+import "math"
 
 func asteroidCollision(asteroids []int) []int {
 	res := make([]int, len(asteroids))
@@ -40,9 +37,4 @@ func asteroidCollision(asteroids []int) []int {
 		}
 	}
 	return res[:leng]
-}
-
-func main() {
-	asteroids := []int{8, -8}
-	fmt.Println(asteroidCollision(asteroids))
 }
