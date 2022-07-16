@@ -1,14 +1,11 @@
-package main
+package solution
 
-import (
-	"fmt"
-	"container/list"
-)
+import "container/list"
 
 type MovingAverage struct {
 	window *list.List
-	cap   int
-	sum   int
+	cap    int
+	sum    int
 }
 
 /** Initialize your data structure here. */
@@ -25,9 +22,4 @@ func (this *MovingAverage) Next(val int) float64 {
 		this.window.Remove(this.window.Front())
 	}
 	return float64(this.sum) / float64(this.window.Len())
-}
-
-func main() {
-	obj := Constructor(3)
-	fmt.Println(obj.Next(1), obj.Next(10), obj.Next(3), obj.Next(5))
 }
