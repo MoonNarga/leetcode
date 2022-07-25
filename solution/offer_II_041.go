@@ -9,7 +9,7 @@ type MovingAverage struct {
 }
 
 /** Initialize your data structure here. */
-func Constructor(size int) MovingAverage {
+func Constructor_II_041(size int) MovingAverage {
 	MA := MovingAverage{window: list.New(), cap: size, sum: 0}
 	return MA
 }
