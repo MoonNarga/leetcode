@@ -4,12 +4,6 @@ import (
 	"fmt"
 )
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 func abs(x, y int) int {
 	if x > y {
 		return x - y
