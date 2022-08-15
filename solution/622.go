@@ -5,7 +5,7 @@ type MyCircularQueue struct {
 	head, tail, length, usage int
 }
 
-func Constructor(k int) MyCircularQueue {
+func Constructor_622(k int) MyCircularQueue {
 	newQu := MyCircularQueue{}
 	newQu.length = k
 	newQu.usage = 0
