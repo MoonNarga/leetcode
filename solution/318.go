@@ -9,7 +9,7 @@ func maxint(x, y int) int {
 	return y
 }
 
-func maxProduct(words []string) int {
+func maxProduct_318(words []string) int {
 	l := make([]int, len(words))
 	code := make([]uint32, len(words))
 	for i, v := range words {
