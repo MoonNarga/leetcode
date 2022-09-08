@@ -5,17 +5,10 @@ type Node struct {
 	Children []*Node
 }
 
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-
 func dfs_559(root *Node, depth int) int {
 	mdepth := depth
 	for _, v := range root.Children {
-		mdepth = max(mdepth, dfs_559(v, depth+1))
+		mdepth = maxInt(mdepth, dfs_559(v, depth+1))
 	}
 	return mdepth
 }
