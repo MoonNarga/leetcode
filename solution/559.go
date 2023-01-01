@@ -8,7 +8,7 @@ type Node struct {
 func dfs_559(root *Node, depth int) int {
 	mdepth := depth
 	for _, v := range root.Children {
-		mdepth = maxInt(mdepth, dfs_559(v, depth+1))
+		mdepth = Max(mdepth, dfs_559(v, depth+1))
 	}
 	return mdepth
 }

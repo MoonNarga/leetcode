@@ -9,7 +9,7 @@ func stoneGameVIII(stones []int) int {
 	}
 	dp[len(stones)-1] = pre[len(stones)-1]
 	for i := len(stones) - 2; i > 0; i-- {
-		dp[i] = maxInt(dp[i+1], pre[i]-dp[i+1])
+		dp[i] = Max(dp[i+1], pre[i]-dp[i+1])
 	}
 	return dp[1]
 }
