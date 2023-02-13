@@ -4,13 +4,6 @@ type col struct {
 	h, ind int
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func trap(height []int) int {
 	stack := make([]col, 0)
 	i := 0
@@ -26,7 +19,7 @@ func trap(height []int) int {
 				stack = stack[:len(stack)-1]
 				break
 			}
-			sum += (min(height[i], stack[len(stack)-2].h) - stack[len(stack)-1].h) * (i - stack[len(stack)-2].ind - 1)
+			sum += (Min(height[i], stack[len(stack)-2].h) - stack[len(stack)-1].h) * (i - stack[len(stack)-2].ind - 1)
 			stack = stack[:len(stack)-1]
 		}
 		stack = append(stack, col{h: height[i], ind: i})
