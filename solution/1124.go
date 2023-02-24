@@ -1,6 +1,6 @@
 package solution
 
-func LongestWPI(hours []int) int {
+func longestWPI(hours []int) int {
 	indexs := map[int]int{}
 	sum, res := 0, 0
 	for i, v := range hours {
